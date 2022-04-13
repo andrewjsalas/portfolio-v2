@@ -1,6 +1,7 @@
 import { useState } from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
+import SiteLogo from '../assets/icons/Front end.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,7 +11,7 @@ const Navbar = () => {
 
       <Logo>
         <Link to='/'>
-          <h3>AJS</h3>
+          <img src={SiteLogo} />
         </Link>
       </Logo>
 
@@ -38,7 +39,7 @@ const Nav = styled.nav`
   top: 0;
   left: 0;
   right: 0;
-  background-color: #090A0C;
+  background-color: #131313;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -77,6 +78,7 @@ const NavMenu = styled.ul`
     font-size: 1.5rem;
     color: white;
     transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
 
     &:hover {
       color: steelblue;
@@ -85,16 +87,9 @@ const NavMenu = styled.ul`
 `
 
 const Logo = styled.div`
-  h3 {
-    display: flex;
-    padding: 1rem 0;
-    font-size: 1.8rem;
-    color: white;
-    font-style: none;
-  }
-
-  a {
-    text-decoration: none;
+  img {
+    height: 4rem;
+    border-radius: 50%;
   }
 `
 
