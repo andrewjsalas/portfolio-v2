@@ -1,4 +1,8 @@
 import styled from "styled-components"
+import CrateDiggerThumb from '../assets/projectThumbs/crate-digger-2.png';
+import MusicPlayerThumb from '../assets/projectThumbs/react-music-player-screenshot.png';
+import DrunkenSpiritsThumb from '../assets/projectThumbs/the-drunken-spirits-screenshot.png';
+
 
 const Projects = () => {
   return (
@@ -9,32 +13,42 @@ const Projects = () => {
         {/* Drunken Spirits App */}
         <GridCard>
           <CardHeader>Drunken Spirits</CardHeader>
-          <GridImage></GridImage>
+          <GridImage src={DrunkenSpiritsThumb}></GridImage>
           <CardButtons>Live Demo</CardButtons>
-          <CardButtons>Github</CardButtons>
+          <CardButtons>GitHub</CardButtons>
           <CardInfo> 
-            <li></li>
+            <li>
+              A cocktail recipe app where the user can search a 
+              database of drink recipes, images, and more. 
+            </li>
+            <li>
+              Built with React, utilizing React Router, 
+              Styled Components, and The CocktailDB API. 
+            </li>
           </CardInfo>
         </GridCard>
 
         {/* Crate Digger  */}
         <GridCard>
           <CardHeader>Crate Digger</CardHeader>
-          <GridImage></GridImage>
+          <GridImage src={CrateDiggerThumb}></GridImage>
           <CardButtons>Live Demo</CardButtons>
-          <CardButtons>Github</CardButtons>
+          <CardButtons>GitHub</CardButtons>
           <CardInfo>
             <li></li>
           </CardInfo>
         </GridCard>
 
         {/* React Music Player */}
+        
         <GridCard>
           <CardHeader>React Music Player</CardHeader>
-          <GridImage></GridImage>
+          <GridImage src={MusicPlayerThumb}></GridImage>
           <CardButtons>Live Demo</CardButtons>
-          <CardButtons>Github</CardButtons>
-          <CardInfo></CardInfo>
+          <CardButtons>GitHub</CardButtons>
+          <CardInfo>
+            <li></li>
+          </CardInfo>
         </GridCard>
 
       </GridContainer>
@@ -43,7 +57,6 @@ const Projects = () => {
 }
 
 const PageContainer = styled.div`
-  height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -65,17 +78,15 @@ const PageHeader = styled.h1`
 `
 
 const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
-  max-width: 40rem;
   margin: 0 auto;
-  grid-gap: 3rem;
+  grid-gap: 2rem;
   margin-top: 2rem;
-
-  @media (max-width: 800px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  align-self: auto;
 `
 
 const GridCard = styled.div`
@@ -83,21 +94,39 @@ const GridCard = styled.div`
 `
 
 const CardHeader = styled.h3`
-
+  padding: 1rem;
 `
 
 const GridImage = styled.img`
-
+  display: grid;
+  max-width: 30rem;
+  justify-content: center;
+  margin: 0 auto;
+  height: 20rem;
 `
 
 const CardButtons = styled.div`
   display: inline-flex;
   justify-content: space-between;
   border: 1px solid red;
+  margin: 1rem;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: white;
+  color: black;
+  font-weight: 800;
 `
 
 const CardInfo = styled.ul`
-
+  box-sizing: border-box;
+  text-align: left;
+  max-width: 25rem;
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+  
+  li {
+    margin-bottom: 1rem;
+  }
 `
 
 export default Projects
