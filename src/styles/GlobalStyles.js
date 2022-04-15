@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
+    background-image: linear-gradient(62deg, #28313a 0%, #171618 100%);
+    color: white;
   }
 `
 

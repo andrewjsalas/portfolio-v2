@@ -12,10 +12,17 @@ const Projects = () => {
       <GridContainer>
         {/* Drunken Spirits App */}
         <GridCard>
-          <CardHeader>Drunken Spirits</CardHeader>
+          <CardHeader>The Drunken Spirits</CardHeader>
           <GridImage src={DrunkenSpiritsThumb}></GridImage>
-          <CardButtons>Live Demo</CardButtons>
-          <CardButtons>GitHub</CardButtons>
+          <CardButtons 
+            href='https://the-drunken-spirits.netlify.app/'
+            target='_blank'
+            >Demo
+          </CardButtons>
+          <CardButtons
+            href="https://github.com/andrewjsalas/the-drunken-spirits"
+            target='_blank'
+            >GitHub</CardButtons>
           <CardInfo> 
             <li>
               A cocktail recipe app where the user can search a 
@@ -32,22 +39,47 @@ const Projects = () => {
         <GridCard>
           <CardHeader>Crate Digger</CardHeader>
           <GridImage src={CrateDiggerThumb}></GridImage>
-          <CardButtons>Live Demo</CardButtons>
-          <CardButtons>GitHub</CardButtons>
+          <CardButtons
+            href="https://salas-crate-digger-2.netlify.app/"
+            target='_blank'
+            >Demo
+          </CardButtons>
+          <CardButtons
+            href="https://github.com/andrewjsalas/crate-digger-2"
+            target='_blank'
+            >GitHub
+          </CardButtons>
           <CardInfo>
-            <li></li>
+            <li>
+              A customizable table to log your record collection along with
+              the option to edit, delete, and cancel an unfinished edit. 
+            </li>
+            <li>
+              Built with React, utiliizing useState and useEffect methods. 
+            </li>
           </CardInfo>
         </GridCard>
 
-        {/* React Music Player */}
-        
+        {/* React Music Player */}        
         <GridCard>
           <CardHeader>React Music Player</CardHeader>
           <GridImage src={MusicPlayerThumb}></GridImage>
-          <CardButtons>Live Demo</CardButtons>
-          <CardButtons>GitHub</CardButtons>
+          <CardButtons 
+            href="https://salas-react-music-player.netlify.app/"
+            target='_blank'
+            >Demo
+          </CardButtons>
+          <CardButtons
+            href="https://github.com/andrewjsalas/react-music-player"
+            target='_blank'
+            >GitHub
+          </CardButtons>
           <CardInfo>
-            <li></li>
+            <li>
+              A music player UI with pause, play, forward, and back
+              functionality. 
+            </li>
+            <li>Built with React</li>
           </CardInfo>
         </GridCard>
 
@@ -57,72 +89,97 @@ const Projects = () => {
 }
 
 const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
   padding: 1rem;
   color: white;
-  background-image: linear-gradient(62deg, #28313a 0%, #171618 100%);
+  text-align: center;
 
   @media (max-width: 800px) {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 `
 
 const PageHeader = styled.h1`
-  display: flex;
   margin: 0 auto;
   margin-top: 8rem;
   text-transform: uppercase;
   font-size: 4rem;
   padding: 1rem;
+  margin-bottom: 2rem;
 `
 
 const GridContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  width: 100%;
   text-align: center;
-  margin: 0 auto;
-  grid-gap: 2rem;
+  margin: 20rem auto;
+  grid-gap: 4rem;
   margin-top: 2rem;
-  align-self: auto;
 `
 
 const GridCard = styled.div`
-  border: 2px solid white;
+  flex-direction: column;
+  background-color: #1f1f1f;
+  box-shadow: 5px 10px 18px #080808;
+  transition: 0.1s ease-in-out;
+  border-radius: 3px;
+
+  &:hover {
+    box-shadow: 5px 10px 18px #000000;
+  }
 `
 
 const CardHeader = styled.h3`
   padding: 1rem;
+  color: white;
+  font-weight: 800;
+  font-size: 2rem;
+  font-family: 'Mukta', sans-serif;
 `
 
-const GridImage = styled.img`
+const GridImage = styled.img` 
   display: grid;
-  max-width: 30rem;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
   justify-content: center;
   margin: 0 auto;
-  height: 20rem;
+  border-top: 1px solid black;
+  border-bottom: 2px solid black;
+
+  @media (max-width: 800px) {
+  }
 `
 
-const CardButtons = styled.div`
+const CardButtons = styled.a`
   display: inline-flex;
   justify-content: space-between;
-  border: 1px solid red;
-  margin: 1rem;
-  justify-content: space-between;
+  margin: 1rem 2rem;
   padding: 0.5rem;
-  background: white;
-  color: black;
+  color: steelblue;
   font-weight: 800;
+  font-size: 1.5rem;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+  }
+
 `
 
 const CardInfo = styled.ul`
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   text-align: left;
-  max-width: 25rem;
-  padding: 1rem 1rem;
+  padding: 1rem 1.5rem;
   font-size: 1.2rem;
+  color: white;
+  border-top: 1px solid gray;
+  justify-content: center;
   
   li {
     margin-bottom: 1rem;
