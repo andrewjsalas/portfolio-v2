@@ -145,8 +145,7 @@ const GridImage = styled.img`
   vertical-align: middle;
   justify-content: center;
   margin: 0 auto;
-  border-top: 1px solid black;
-  border-bottom: 2px solid black;
+  border-top: 1px solid steelblue;
 
   @media (max-width: 800px) {
   }
@@ -178,7 +177,7 @@ const CardInfo = styled.ul`
   padding: 1rem 1.5rem;
   font-size: 1.2rem;
   color: white;
-  border-top: 1px solid gray;
+  border-top: 1px solid steelblue;
   justify-content: center;
   
   li {

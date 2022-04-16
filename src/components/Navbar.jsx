@@ -11,7 +11,7 @@ const Navbar = () => {
 
       <Logo>
         <Link to='/'>
-          <img src={SiteLogo} />
+          <img src={SiteLogo} alt='' />
         </Link>
       </Logo>
 
@@ -22,11 +22,14 @@ const Navbar = () => {
       </Hamburger>
 
       <NavMenu isOpen={isOpen}>
+        <Link to='/about'>
+          <ul>About</ul>
+        </Link>
         <Link to='/projects'>
           <ul>Projects</ul>
         </Link>
-        <Link to='/about'>
-          <ul>About</ul>
+        <Link to='./sound'>
+          <ul>Sound & Music</ul>
         </Link>
       </NavMenu>
 
@@ -75,7 +78,7 @@ const NavMenu = styled.ul`
     display: flex;
     padding: 1rem 2rem;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: white;
     transition: all 0.3s ease-in-out;
     text-transform: uppercase;
@@ -88,7 +91,7 @@ const NavMenu = styled.ul`
 
 const Logo = styled.div`
   img {
-    height: 4rem;
+    height: 3.5rem;
     border-radius: 50%;
   }
 `
