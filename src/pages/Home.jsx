@@ -25,7 +25,7 @@ const Home = () => {
         </Button>
 
         {/* Resume */}
-        <Button href="https://drive.google.com/file/d/1TTyHoWrUTp8d8-yVETHTDdEESrmnwd7T/view?usp=sharing" target='-blank'>
+        <Button href="https://drive.google.com/file/d/1fdlNS_T9zzKzSNsJw0HQJyBDwtt4iRCK/view?usp=sharing" target='-blank'>
           <ButtonText>Resume</ButtonText>
           <ButtonIcon src={ResumeIcon}></ButtonIcon>
         </Button>
@@ -66,6 +66,10 @@ const HeaderName = styled.h1`
   display: flex;
   text-align: center;
   font-size: 6rem;
+
+  @media (max-width: 400px) {
+    font-size: 4rem;
+  }
 `
 
 const SubHeader = styled.h3`
@@ -73,6 +77,10 @@ const SubHeader = styled.h3`
   margin-top: 1rem;
   color: steelblue;
   text-align: center;
+
+  @media (max-width: 400px) {
+    font-size: 2rem;
+  }
 `
 
 const ButtonContainer = styled.div`

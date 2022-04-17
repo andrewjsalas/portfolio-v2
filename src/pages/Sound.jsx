@@ -60,6 +60,10 @@ const PageHeader = styled.h1`
   text-align: center;
   padding: 1rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 400px) {
+    font-size: 2rem;
+  }
 `
 
 /// YOUTUBE CONTAINER /// 
@@ -70,6 +74,10 @@ const YouTubeContainer = styled.div`
 
   @media (max-width: 1000px) {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media (max-width: 400px) {
+    padding: 1rem;
   }
 `
 
@@ -83,6 +91,10 @@ const YTText = styled.p`
     max-width: 100%;
   }
 
+  @media (max-width: 400px) {
+    max-width: 100%;
+    padding: 0;
+  }
 `
 
 const YTVideoPlayer = styled.div`

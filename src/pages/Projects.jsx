@@ -105,6 +105,10 @@ const PageHeader = styled.h1`
   font-size: 4rem;
   padding: 1rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 400px) {
+    font-size: 3rem;
+  }
 `
 
 const GridContainer = styled.div`

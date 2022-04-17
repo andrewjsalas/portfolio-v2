@@ -86,6 +86,10 @@ const PageHeader = styled.h1`
   margin-top: 10rem;
   font-size: 4rem;
   margin-bottom: 4rem;
+
+  @media (max-width: 400px) {
+    font-size: 2rem;
+  }
 `
 
 const AboutSection = styled.div`
@@ -115,6 +119,11 @@ const AboutText = styled.p`
 
   @media (max-width: 550px) {
     margin: 2rem;
+  }
+
+  @media (max-width: 400px) {
+    width: 55%;
+    font-size: 1.2rem;
   }
 `
 
