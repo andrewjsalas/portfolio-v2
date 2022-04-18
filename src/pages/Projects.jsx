@@ -106,8 +106,9 @@ const PageHeader = styled.h1`
   padding: 1rem;
   margin-bottom: 2rem;
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     font-size: 3rem;
+    margin-top: 6rem;
   }
 `
 

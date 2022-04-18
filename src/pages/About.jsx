@@ -74,10 +74,15 @@ const PageContainer = styled.div`
   align-items: center;
   height: 100vh;
   background-image: linear-gradient(62deg, #28313a 0%, #171618 100%);
-  background-size: cover;
+  background-repeat: no-repeat; 
+  overflow: hidden;
 
   @media (max-width: 1000px) {
     height: auto;
+  }
+
+  @media (max-width: 500px) {
+    width: 100vw; 
   }
 `
 
@@ -89,12 +94,12 @@ const PageHeader = styled.h1`
 
   @media (max-width: 400px) {
     font-size: 2rem;
+    margin-bottom: 2rem;
   }
 `
 
 const AboutSection = styled.div`
   display: flex;
-
   justify-content: space-between;
   align-items: center;
   font-size: 1.5rem;
@@ -117,11 +122,7 @@ const AboutText = styled.p`
     width: 80%;
   }
 
-  @media (max-width: 550px) {
-    margin: 2rem;
-  }
-
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     width: 55%;
     font-size: 1.2rem;
   }
@@ -135,11 +136,6 @@ const SkillsContainer = styled.div`
   align-items: center;
   padding: 3rem;
   width: 50%;
-
-  @media (max-width: 1000px ) {
-    margin: 2rem;
-    grid-gap: 1rem;
-  }
 `
 
 const SkillsItem = styled.div`

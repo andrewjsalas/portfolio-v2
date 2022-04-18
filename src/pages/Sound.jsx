@@ -61,6 +61,11 @@ const PageHeader = styled.h1`
   padding: 1rem;
   margin-bottom: 2rem;
 
+  @media (max-width: 500px) {
+    font-size: 3rem;
+    padding: 0;
+  }
+
   @media (max-width: 400px) {
     font-size: 2rem;
   }
@@ -89,6 +94,10 @@ const YTText = styled.p`
 
   @media (max-width: 1200px) {
     max-width: 100%;
+  }
+
+  @media (max-width: 500px) {
+    padding: 0;
   }
 
   @media (max-width: 400px) {

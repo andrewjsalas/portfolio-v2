@@ -58,7 +58,7 @@ const HomeContainer = styled.div`
   background-image: linear-gradient(62deg, #28313a 0%, #171618 100%);
 
   @media (max-width: 800px) {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 `
 
@@ -67,8 +67,13 @@ const HeaderName = styled.h1`
   text-align: center;
   font-size: 6rem;
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     font-size: 4rem;
+  }
+
+  @media (max-width: 400px) {
+    margin-top: 5rem;
+    font-size: 3rem;
   }
 `
 
@@ -78,8 +83,12 @@ const SubHeader = styled.h3`
   color: steelblue;
   text-align: center;
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     font-size: 2rem;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 1.5rem;
   }
 `
 
@@ -115,6 +124,10 @@ const Button = styled.a`
     opacity: 85%;
     box-shadow: 5px 10px 8px #000000;
   }
+
+  @media (max-width: 400px) {
+    padding: -1rem;
+  }
 `
 
 const ButtonText = styled.span`
@@ -126,11 +139,19 @@ const ButtonText = styled.span`
   font-weight: 600;
   padding: 0.3rem;
   font-family: 'Mukta', sans-serif;
+
+  @media (max-width: 400px) {
+    font-size: 1.3rem;
+  }
 `
 
 const ButtonIcon = styled.img`
   height: 3rem;
   padding-left: 0.5rem;
+
+  @media (max-width: 400px) {
+    height: 2rem;
+  }
 `
 
 export default Home
