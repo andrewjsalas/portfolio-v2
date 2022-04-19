@@ -72,7 +72,7 @@ const HeaderName = styled.h1`
   }
 
   @media (max-width: 400px) {
-    margin-top: 5rem;
+    margin-top: 4rem;
     font-size: 3rem;
   }
 `

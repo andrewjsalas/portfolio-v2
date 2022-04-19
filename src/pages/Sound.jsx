@@ -48,6 +48,7 @@ const PageContainer = styled.div`
   height: 100vh;
   padding: 1rem;
   background-image: linear-gradient(62deg, #28313a 0%, #171618 100%);
+  overflow: hidden;
 
   @media (max-width: 1000px) {
     height: auto;
