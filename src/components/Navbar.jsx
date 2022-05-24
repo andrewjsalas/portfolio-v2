@@ -50,7 +50,7 @@ const Nav = styled.nav`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.3rem 4rem;
+  padding: 0.4rem 4rem;
 `
 
 const NavMenu = styled.ul`
@@ -61,7 +61,7 @@ const NavMenu = styled.ul`
   position: relative;
   text-decoration: none;
 
-  @media (max-width: 720px) {
+  @media (max-width: 789px) {
     overflow: hidden;
     flex-direction: column;
     width: 100%;
@@ -79,7 +79,7 @@ const NavMenu = styled.ul`
   a {
     text-decoration: none;
     display: flex;
-    padding: 1rem 2rem;
+    padding: 1rem 1.2rem;
     cursor: pointer;
     font-size: 1.3rem;
     color: white;
@@ -114,7 +114,7 @@ const Hamburger = styled.div`
   
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 789px) {
     display: flex;
   }
 `
