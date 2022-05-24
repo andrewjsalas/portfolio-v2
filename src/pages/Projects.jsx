@@ -2,7 +2,7 @@ import styled from "styled-components"
 import CrateDiggerThumb from '../assets/projectThumbs/crate-digger-2.png';
 import MusicPlayerThumb from '../assets/projectThumbs/react-music-player-screenshot.png';
 import DrunkenSpiritsThumb from '../assets/projectThumbs/the-drunken-spirits-screenshot.png';
-
+import FirebaseLoginForm from '../assets/projectThumbs/firebase-login-form.png'
 
 const Projects = () => {
   return (
@@ -31,6 +31,33 @@ const Projects = () => {
             <li>
               Built with React, utilizing React Router, 
               Styled Components, and The CocktailDB API. 
+            </li>
+          </CardInfo>
+        </GridCard>
+
+        <GridCard>
+          <CardHeader>Firebase Login Form</CardHeader>
+          <GridImage src={FirebaseLoginForm}></GridImage>
+          <CardButtons 
+            href='https://ajs-login-form.netlify.app/'
+            target='_blank'
+            >Demo
+          </CardButtons>
+          <CardButtons
+            href="https://github.com/andrewjsalas/react-login-signup"
+            target='_blank'
+            >GitHub</CardButtons>
+          <CardInfo> 
+            <li>
+              A Signup and Login Form. 
+            </li>
+            <li>
+              Built with React, utilizing React Router, Firebase for login and signup 
+              authentication, and Firebase Google Auth for users who want to use their 
+              gmail. 
+            </li>
+            <li>
+              Styled with Bootstrap 5.
             </li>
           </CardInfo>
         </GridCard>

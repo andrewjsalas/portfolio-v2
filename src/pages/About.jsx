@@ -5,6 +5,9 @@ import JSLogo from '../assets/icons/javascript-39404.png'
 import ReactLogo from '../assets/icons/React-icon-color.svg'
 import StyledComponentsLogo from '../assets/icons/styled-components-logo.svg'
 import FirebaseLogo from '../assets/icons/firebase-logo.png'
+import ReactRouter from '../assets/icons/react-router.svg'
+import BootstrapLogo from '../assets/icons/bootstrap-logo.svg'
+import GithubLogo from '../assets/icons/GitHub-Mark-Light-120px-plus.png'
 
 const About = () => {
   return (
@@ -55,6 +58,22 @@ const About = () => {
             <SkillsIcon src={FirebaseLogo} />
             <p>FIREBASE</p>
           </SkillsItem>
+
+          <SkillsItem>
+            <SkillsIcon src={BootstrapLogo} />
+            <p>BOOTSTRAP</p>
+          </SkillsItem>
+
+          <SkillsItem>
+            <SkillsIcon src={ReactRouter} />
+            <p>REACT ROUTER</p>
+          </SkillsItem>
+
+          <SkillsItem>
+            <SkillsIcon src={GithubLogo} />
+            <p>GITHUB</p>
+          </SkillsItem>
+          
 
         </SkillsContainer>
 
@@ -130,12 +149,16 @@ const AboutText = styled.p`
 
 const SkillsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
   justify-content: center;
   grid-gap: 1rem;
   align-items: center;
   padding: 3rem;
   width: 50%;
+
+  @media (max-width: 715px) {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
 `
 
 const SkillsItem = styled.div`
@@ -147,10 +170,15 @@ const SkillsItem = styled.div`
   justify-content: center;
   overflow: hidden;
   padding: 1rem;
+  transition: 0.3s ease-in-out;
 
   p {
     font-size: 1rem;
     text-align: center;
+  }
+
+  &:hover{
+    color: steelblue;
   }
 `
 

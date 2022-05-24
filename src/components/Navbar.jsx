@@ -31,6 +31,9 @@ const Navbar = () => {
         <Link to='./sound'>
           <ul>Sound & Music</ul>
         </Link>
+        <Link to='./contact'>
+          <ul>Contact</ul>
+        </Link>
       </NavMenu>
 
     </Nav>
