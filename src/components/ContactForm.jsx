@@ -1,22 +1,41 @@
 import styled from "styled-components"
+import { useRef, useState } from "react"
+import emailjs from '@emailjs/browser'
+
 
 const ContactForm = () => {
+  const [result, showResult] = useState(false)
+  const form = useRef()
 
+  const sendEmail = (e) => {
+    e.preventDefault();
 
+    emailjs.sendForm('service_fmfuikj', 'template_2zn0gtk', form.current, 'ctpiNQ5Qlt0E6k_G5')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
+  // Display success message
+  const Result = () => {
+    return (
+      <FormResult>Your message was successfully sent!</FormResult>
+    )
+  }
 
   return (
     <PageContainer>
 
-      <Form>
+      <Form ref={form} onSubmit={sendEmail}>
         
         <FormGroup>
           <Label htmlFor="name"></Label>
           <Input 
             type='text' 
             placeholder="Name" 
-            name='name' 
-            id="name_input" 
+            name='user_name' 
             required 
           />
         </FormGroup>
@@ -28,7 +47,6 @@ const ContactForm = () => {
             placeholder="Email" 
             name='email' 
             required 
-            id='email_input' 
           />
         </FormGroup>
 
@@ -36,14 +54,17 @@ const ContactForm = () => {
           <Label htmlFor="message"></Label>
           <TextArea 
             rows='3' 
-            placeholder="Message" 
-            id="message_input" 
+            placeholder="Message"
+            name="message"
             required>
           </TextArea>
         </FormGroup>
 
-        <Button type="submit"><span>Send</span></Button>
+        <Button type="submit" value='send'>Send</Button>
 
+        <FormResult>{
+          result ? <Result /> : null
+        }</FormResult>
       </Form>
     </PageContainer>
   )
@@ -70,8 +91,6 @@ const Form = styled.div`
   }
 
 `
-
-
 
 const FormGroup = styled.div`
   display: block;
@@ -144,9 +163,12 @@ const Button = styled.button`
   padding: 0rem 1rem;
 
   &:hover {
-    background-color: #1f1f1f;
     color: white;
     border-color: white;
   }
+
+`
+
+const FormResult = styled.p`
 
 `
